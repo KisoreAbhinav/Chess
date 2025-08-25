@@ -1,2 +1,2 @@
-# Chess
-A Playable Chess Board Designed in C
+# Chess in C
+A Playable Chess Board Designed using just arrays in C programming language
