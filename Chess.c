@@ -2,16 +2,17 @@
 #define N 8
 
 int display(char *board[N][N]) {
-    printf("\t|A|\t|B|\t|C|\t|D|\t|E|\t|F|\t|G|\t|H|\n\n");
+    char *rowLabels[8] = {"⑧","⑦","⑥","⑤","④","③","②","①"};
+    printf("\t🄰\t🄱\t🄲\t🄳\t🄴\t🄵\t🄶\t🄷\n\n");
     for (int i = 0; i < N; i++) {
-        printf("|%d|\t", 8 - i);
+        printf("%s\t", rowLabels[i]);
         for (int j = 0; j < N; j++) {
             printf("%s\t", board[i][j]);
         }
-        printf("|%d", 8 - i);
-        printf("|\n\n");
+        printf("%s", rowLabels[i]);
+        printf("\n\n");
     }
-    printf("\t|A|\t|B|\t|C|\t|D|\t|E|\t|F|\t|G|\t|H|\n");
+    printf("\t🄰\t🄱\t🄲\t🄳\t🄴\t🄵\t🄶\t🄷\n\n");
     return 0;
 }
 
@@ -45,4 +46,3 @@ int main(){
     defaultboard(chess);
     display(chess);
 }
-
