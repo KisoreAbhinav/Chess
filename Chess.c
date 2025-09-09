@@ -46,10 +46,10 @@ void defaultboard(char *board[N][N]){
     }
 }
 
-
+// FUNCTIONS TO CHECK FOR LEGAL MOVES
 
 int main(){
-    
+
     //define chess board
     char *chess[N][N];
 
@@ -59,6 +59,8 @@ int main(){
     //display the default chess board
     display(chess);
 
+    char move[10];
+    scanf("%s",move);
     //start with white's moves, takes input and loads them on the board
     //call the display function to show the board after every move
     
