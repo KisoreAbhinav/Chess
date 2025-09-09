@@ -1,6 +1,8 @@
 #include<stdio.h>
 #define N 8
 
+// Function to display the board at the start of the game and after every move
+// This function is called at the start to show the default board and update after every legal move is played
 int display(char *board[N][N]) {
     char *rowLabels[8] = {"⑧","⑦","⑥","⑤","④","③","②","①"};
     printf("\t🄰\t🄱\t🄲\t🄳\t🄴\t🄵\t🄶\t🄷\n\n");
@@ -16,6 +18,9 @@ int display(char *board[N][N]) {
     return 0;
 }
 
+
+// Function to display the default chess board
+// Lets do this for showing the board at the very start and thats the entire need for this function
 void defaultboard(char *board[N][N]){
     for (int i=0;i<N;i++){
         for (int j=0;j<N;j++){
@@ -34,15 +39,27 @@ void defaultboard(char *board[N][N]){
     board[7][0]=board[7][7]="♜";
     board[7][1]=board[7][6]="♞";
     board[7][2]=board[7][5]="♝";
-    board[7][3]="♕";
+    board[7][3]="♛";
     board[7][4]="♚";
     for (int j=0;j<N;j++){
         board[6][j]="♟";
     }
 }
 
+
+
 int main(){
+    
+    //define chess board
     char *chess[N][N];
+
+    //assign default chess board and pieces postions
     defaultboard(chess);
+
+    //display the default chess board
     display(chess);
+
+    //start with white's moves, takes input and loads them on the board
+    //call the display function to show the board after every move
+    
 }
